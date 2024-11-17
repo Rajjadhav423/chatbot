@@ -112,8 +112,6 @@ with col1:
 
     concentration = st.number_input(
         "Enter Concentration (g/kg)",
-        min_value=0.54687,  # Minimum concentration from your data (0.54687%),
-        max_value=35.0,     # Maximum concentration from your data (35%),
         step=0.1,
     )
 
@@ -127,10 +125,7 @@ with col2:
     # Predict button
     if st.button("Predict Properties"):
         # Check if the user inputs are within a reasonable range based on your data
-        if not (295.15 <= temperature <= 299.15):
-            st.warning("Temperature is outside the typical range in the dataset. Predictions may not be accurate.")
-        if not (0.54687 <= concentration <= 35.0):
-            st.warning("Concentration is outside the typical range in the dataset. Predictions may not be accurate.")
+
         
         # Make predictions based on user inputs
         (predicted_density, predicted_velocity, predicted_intermolecular_free_length,
