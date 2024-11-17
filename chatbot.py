@@ -106,8 +106,6 @@ with col1:
     # Collect user inputs
     temperature = st.number_input(
         "Enter Temperature (°C)",
-        min_value=295.15,  # Minimum temperature from your data (295.15°C)
-        max_value=299.15,  # Maximum temperature from your data (299.15°C)
         step=0.1,
         help="Enter the temperature in degrees Celsius within the valid range of 295.15°C to 299.15°C."
     )
