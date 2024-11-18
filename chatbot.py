@@ -105,7 +105,7 @@ with col1:
     
     # Collect user inputs
     temperature = st.number_input(
-        "Enter Temperature (°C)",
+        "Enter Temperature (Kelvin)",
         step=0.1,
         help="Enter the temperature in degrees Celsius within the valid range of 295.15°C to 299.15°C."
     )
