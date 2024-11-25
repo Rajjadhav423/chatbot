@@ -243,7 +243,7 @@ def predict_seawater_properties(temperature, concentration):
 
 # Streamlit Interface
 st.title("ThermoPredictor 🌊")
-st.subheader("Predict Seawater Properties using Temperature and Concentration")
+st.subheader("The thermodynamic properties prediction using Machine Learning for seawater.")
 
 # Create columns for input and output
 col1, col2 = st.columns([1, 1])
@@ -254,7 +254,7 @@ with col1:
     
     # Collect user inputs
     temperature = st.number_input(
-        "Enter Temperature (kelvin)",
+        "Enter Temperature (K)",
      
         step=0.1,
         help="Enter the temperature in degrees Celsius within the valid range of 295.15°C to 299.15°C."
