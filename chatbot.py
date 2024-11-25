@@ -105,7 +105,7 @@
     
 #     # Collect user inputs
 #     temperature = st.number_input(
-#         "Enter Temperature (Kelvin)",
+#         "Enter Temperature (K)",
 #         step=0.1,
 #         help="Enter the temperature in degrees Celsius within the valid range of 295.15°C to 299.15°C."
 #     )
@@ -136,11 +136,11 @@
 #         if predicted_density is not None and predicted_velocity is not None and predicted_intermolecular_free_length is not None:
 #             st.success(f"Predicted Seawater Density: {predicted_density:.6f} kg/m³")
 #             st.success(f"Predicted Ultrasonic Velocity: {predicted_velocity:.6f} m/s")
-#             st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} cm⁻¹")
+#             st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} m*10^-11")
 #             st.success(f"Predicted Internal Pressure: {predicted_internal_pressure:.6f} MPa")
 #             st.success(f"Predicted Cohesion Energy Density: {predicted_cohesion_energy_density:.6f} J/m³")
 #             st.success(f"Predicted Gruneisen Parameter: {predicted_gruneisen_parameter:.6f}")
-#             st.success(f"Predicted Acoustic Impedance: {predicted_acoustic_impedance:.6f} kg/m²s")
+#             st.success(f"Predicted Acoustic Impedance: {predicted_acoustic_impedance:.6f} kg/m²s*10^4")
 #             st.success(f"Predicted Non-Linearity Parameter: {predicted_non_linearity_parameter:.6f}")
 #             st.success(f"Predicted Solubility Parameter: {predicted_solubility_parameter:.6f} (g/kg)¹²")
 
