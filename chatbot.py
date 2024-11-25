@@ -32,10 +32,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Define the paths to the model files (keeping them in the same folder as the app)
-model_path_density = 'PKL_FILES/alpha_rf.pkl'
-model_path_velocity = 'PKL_FILES/u_rf.pkl'
-model_path_Intermolecular_Free_Length = 'PKL_FILES/L_RF.pkl'
-model_path_Internal_pressure = 'PKL_FILES/P-rf.pkl'
+model_path_density = 'density.pkl'
+model_path_velocity = 'ultrasonicvelocity.pkl'
+model_path_Intermolecular_Free_Length = 'intermolecularfreelength.pkl'
+model_path_Internal_pressure = 'internalpressure.pkl'
 model_path_Cohesion_Energy_Density = 'PKL_FILES/CED_RF.pkl'
 model_path_Gruneisen_Parameter = 'PKL_FILES/gp_rf.pkl'
 model_path_Acoustic_Impendance = "PKL_FILES/z_rf.pkl"
