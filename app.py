@@ -96,8 +96,7 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
-pip install xgboost
-import xgboost
+
 
 # Define the paths to the model files (keeping them in the same folder as the app)
 model_path_density = 'density.pkl'
