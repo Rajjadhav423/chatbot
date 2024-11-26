@@ -261,7 +261,9 @@ def predict_seawater_properties(temperature, concentration):
         solubility_parameter_prediction = model_Solubility_Parameter.predict(input_data)
 
         # Return all predicted properties
-        return (density_prediction[0], velocity_prediction[0], thermal_expansion_coefficient_prediction[0],Adiabatic_Compressibility_prediction[0], Isothermal_Compressibility_prediction[0], Heat_Capacity_prediction[0], intermolecular_free_length_prediction[0],
+        return (density_prediction[0], velocity_prediction[0], thermal_expansion_coefficient_prediction[0],
+                Adiabatic_Compressibility_prediction[0], Isothermal_Compressibility_prediction[0], 
+                Heat_Capacity_prediction[0], intermolecular_free_length_prediction[0],
                 internal_pressure_prediction[0], cohesion_energy_density_prediction[0], gruneisen_parameter_prediction[0],
                 acoustic_impedance_prediction[0], non_linearity_parameter_prediction[0], solubility_parameter_prediction[0])
 
@@ -306,7 +308,9 @@ with col2:
         
         
         # Make predictions based on user inputs
-        (predicted_density, predicted_velocity, predicted_thermal_expansion_coefficient, predicted_Adiabatic_Compressibility, predicted_Isothermal_Compressibility, predicted_Heat_Capacity, predicted_intermolecular_free_length,
+        (predicted_density, predicted_velocity, predicted_thermal_expansion_coefficient, 
+         predicted_Adiabatic_Compressibility, predicted_Isothermal_Compressibility, 
+         predicted_Heat_Capacity, predicted_intermolecular_free_length,
          predicted_internal_pressure, predicted_cohesion_energy_density, predicted_gruneisen_parameter,
          predicted_acoustic_impedance, predicted_non_linearity_parameter, predicted_solubility_parameter) = predict_seawater_properties(temperature, concentration)
         
