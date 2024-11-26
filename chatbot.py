@@ -34,6 +34,10 @@
 # # Define the paths to the model files (keeping them in the same folder as the app)
 # model_path_density = 'density.pkl'
 # model_path_velocity = 'ultrasonicvelocity.pkl'
+# model_path_thermal_expansion_coefficient = 'thermalexpansion.pkl'
+# model_path_Adiabatic_Compressibility = 'AdiabaticCompressibility.pkl'
+# model_path_Isothermal_Compressibility = 'IsothermalCompressibility.pkl'
+# model_path_Heat_Capacity = 'heatcapacity.pkl'
 # model_path_Intermolecular_Free_Length = 'intermolecularfreelength.pkl'
 # model_path_Internal_pressure = 'internalpressure.pkl'
 # model_path_Cohesion_Energy_Density = 'PKL_FILES/CED_RF.pkl'
@@ -58,6 +62,10 @@
 # # Load models
 # model_density = load_model(model_path_density)
 # model_velocity = load_model(model_path_velocity)
+# model_thermal_expansion_coefficient = load_model(model_path_thermal_expansion_coefficient)
+# model_Adiabatic_Compressibility = load_model(model_path_Adiabatic_Compressibility)
+# model_Isothermal_Compressibility = load_model(model_path_Isothermal_Compressibility)
+# model_Heat_Capacity = load_model(model_path_Heat_Capacity)
 # model_Intermolecular_Free_Length = load_model(model_path_Intermolecular_Free_Length)
 # model_Internal_pressure = load_model(model_path_Internal_pressure)
 # model_Cohesion_Energy_Density = load_model(model_path_Cohesion_Energy_Density)
@@ -75,6 +83,10 @@
 #         # Make predictions
 #         density_prediction = model_density.predict(input_data)
 #         velocity_prediction = model_velocity.predict(input_data)
+#         thermal_expansion_coefficient_prediction = model_thermal_expansion_coefficient.predict(input_data)
+#         Adiabatic_Compressibility_prediction = model_Adiabatic_Compressibility.predict(input_data)
+#         Isothermal_Compressibility_prediction = model_Isothermal_Compressibility.predict(input_data)
+#         Heat_Capacity_prediction = model_Heat_Capacity.predict(input_data)
 #         intermolecular_free_length_prediction = model_Intermolecular_Free_Length.predict(input_data)
 #         internal_pressure_prediction = model_Internal_pressure.predict(input_data)
 #         cohesion_energy_density_prediction = model_Cohesion_Energy_Density.predict(input_data)
@@ -84,7 +96,7 @@
 #         solubility_parameter_prediction = model_Solubility_Parameter.predict(input_data)
 
 #         # Return all predicted properties
-#         return (density_prediction[0], velocity_prediction[0], intermolecular_free_length_prediction[0],
+#         return (density_prediction[0], velocity_prediction[0], thermal_expansion_coefficient_prediction[0],Adiabatic_Compressibility_prediction[0], Isothermal_Compressibility_prediction[0], Heat_Capacity_prediction[0], intermolecular_free_length_prediction[0],
 #                 internal_pressure_prediction[0], cohesion_energy_density_prediction[0], gruneisen_parameter_prediction[0],
 #                 acoustic_impedance_prediction[0], non_linearity_parameter_prediction[0], solubility_parameter_prediction[0])
 
@@ -128,7 +140,7 @@
 
         
 #         # Make predictions based on user inputs
-#         (predicted_density, predicted_velocity, predicted_intermolecular_free_length,
+#         (predicted_density, predicted_velocity, predicted_thermal_expansion_coefficient, predicted_Adiabatic_Compressibility, predicted_Isothermal_Compressibility, predicted_Heat_Capacity, predicted_intermolecular_free_length,
 #          predicted_internal_pressure, predicted_cohesion_energy_density, predicted_gruneisen_parameter,
 #          predicted_acoustic_impedance, predicted_non_linearity_parameter, predicted_solubility_parameter) = predict_seawater_properties(temperature, concentration)
         
@@ -136,9 +148,13 @@
 #         if predicted_density is not None and predicted_velocity is not None and predicted_intermolecular_free_length is not None:
 #             st.success(f"Predicted Seawater Density: {predicted_density:.6f} kg/m³")
 #             st.success(f"Predicted Ultrasonic Velocity: {predicted_velocity:.6f} m/s")
+#             st.success(f"Predicted Ultrasonic Velocity: {predicted_thermal_expansion_coefficient:.6f} K^-1")
+#             st.success(f"Predicted Ultrasonic Velocity: {predicted_Adiabatic_Compressibility:.6f} TPa^-1")
+#             st.success(f"Predicted Ultrasonic Velocity: {predicted_Isothermal_Compressibility:.6f} TPa^-1")
+#             st.success(f"Predicted Ultrasonic Velocity: {predicted_Heat_Capacity:.6f} KJ/Kg*K")
 #             st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} m*10^-11")
 #             st.success(f"Predicted Internal Pressure: {predicted_internal_pressure:.6f} MPa")
-#             st.success(f"Predicted Cohesion Energy Density: {predicted_cohesion_energy_density:.6f} J/m³")
+#             st.success(f"Predicted Cohesion Energy Density: {predicted_cohesion_energy_density:.6f} Pa*m")
 #             st.success(f"Predicted Gruneisen Parameter: {predicted_gruneisen_parameter:.6f}")
 #             st.success(f"Predicted Acoustic Impedance: {predicted_acoustic_impedance:.6f} kg/m²s*10^4")
 #             st.success(f"Predicted Non-Linearity Parameter: {predicted_non_linearity_parameter:.6f}")
@@ -181,8 +197,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Define the paths to the model files (keeping them in the same folder as the app)
-model_path_density = 'PKL_FILES/alpha_rf.pkl'
-model_path_velocity = 'PKL_FILES/u_rf.pkl'
+model_path_density = 'density.pkl'
+model_path_velocity = 'ultrasonicvelocity.pkl'
+model_path_thermal_expansion_coefficient = 'thermalexpansion.pkl'
+model_path_Adiabatic_Compressibility = 'AdiabaticCompressibility.pkl'
+model_path_Isothermal_Compressibility = 'IsothermalCompressibility.pkl'
+model_path_Heat_Capacity = 'heatcapacity.pkl'
 model_path_Intermolecular_Free_Length = 'PKL_FILES/L_RF.pkl'
 model_path_Internal_pressure = 'PKL_FILES/P-rf.pkl'
 model_path_Cohesion_Energy_Density = 'PKL_FILES/CED_RF.pkl'
@@ -207,6 +227,10 @@ def load_model(model_path):
 # Load models
 model_density = load_model(model_path_density)
 model_velocity = load_model(model_path_velocity)
+model_thermal_expansion_coefficient = load_model(model_path_thermal_expansion_coefficient)
+model_Adiabatic_Compressibility = load_model(model_path_Adiabatic_Compressibility)
+model_Isothermal_Compressibility = load_model(model_path_Isothermal_Compressibility)
+model_Heat_Capacity = load_model(model_path_Heat_Capacity)
 model_Intermolecular_Free_Length = load_model(model_path_Intermolecular_Free_Length)
 model_Internal_pressure = load_model(model_path_Internal_pressure)
 model_Cohesion_Energy_Density = load_model(model_path_Cohesion_Energy_Density)
@@ -224,6 +248,10 @@ def predict_seawater_properties(temperature, concentration):
         # Make predictions
         density_prediction = model_density.predict(input_data)
         velocity_prediction = model_velocity.predict(input_data)
+        thermal_expansion_coefficient_prediction = model_thermal_expansion_coefficient.predict(input_data)
+        Adiabatic_Compressibility_prediction = model_Adiabatic_Compressibility.predict(input_data)
+        Isothermal_Compressibility_prediction = model_Isothermal_Compressibility.predict(input_data)
+        Heat_Capacity_prediction = model_Heat_Capacity.predict(input_data)
         intermolecular_free_length_prediction = model_Intermolecular_Free_Length.predict(input_data)
         internal_pressure_prediction = model_Internal_pressure.predict(input_data)
         cohesion_energy_density_prediction = model_Cohesion_Energy_Density.predict(input_data)
@@ -233,7 +261,7 @@ def predict_seawater_properties(temperature, concentration):
         solubility_parameter_prediction = model_Solubility_Parameter.predict(input_data)
 
         # Return all predicted properties
-        return (density_prediction[0], velocity_prediction[0], intermolecular_free_length_prediction[0],
+        return (density_prediction[0], velocity_prediction[0], thermal_expansion_coefficient_prediction[0],Adiabatic_Compressibility_prediction[0], Isothermal_Compressibility_prediction[0], Heat_Capacity_prediction[0], intermolecular_free_length_prediction[0],
                 internal_pressure_prediction[0], cohesion_energy_density_prediction[0], gruneisen_parameter_prediction[0],
                 acoustic_impedance_prediction[0], non_linearity_parameter_prediction[0], solubility_parameter_prediction[0])
 
@@ -278,7 +306,7 @@ with col2:
         
         
         # Make predictions based on user inputs
-        (predicted_density, predicted_velocity, predicted_intermolecular_free_length,
+        (predicted_density, predicted_velocity, predicted_thermal_expansion_coefficient, predicted_Adiabatic_Compressibility, predicted_Isothermal_Compressibility, predicted_Heat_Capacity, predicted_intermolecular_free_length,
          predicted_internal_pressure, predicted_cohesion_energy_density, predicted_gruneisen_parameter,
          predicted_acoustic_impedance, predicted_non_linearity_parameter, predicted_solubility_parameter) = predict_seawater_properties(temperature, concentration)
         
@@ -286,6 +314,10 @@ with col2:
         if predicted_density is not None and predicted_velocity is not None and predicted_intermolecular_free_length is not None:
             st.success(f"Predicted Seawater Density: {predicted_density:.6f} kg/m³")
             st.success(f"Predicted Ultrasonic Velocity: {predicted_velocity:.6f} m/s")
+            st.success(f"Predicted Ultrasonic Velocity: {predicted_thermal_expansion_coefficient:.6f} K^-1")
+            st.success(f"Predicted Ultrasonic Velocity: {predicted_Adiabatic_Compressibility:.6f} TPa^-1")
+            st.success(f"Predicted Ultrasonic Velocity: {predicted_Isothermal_Compressibility:.6f} TPa^-1")
+            st.success(f"Predicted Ultrasonic Velocity: {predicted_Heat_Capacity:.6f} KJ/Kg*K")
             st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} m*10^-11")
             st.success(f"Predicted Internal Pressure: {predicted_internal_pressure:.6f} MPa")
             st.success(f"Predicted Cohesion Energy Density: {predicted_cohesion_energy_density:.6f} J/m³")
