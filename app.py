@@ -217,7 +217,7 @@ if st.button("Predict Properties"):
         st.success(f"Predicted Adiabatic Compressibility: {predicted_Adiabatic_Compressibility:.6f} TPa\u207B\u00B9")
         st.success(f"Predicted Isothermal Compressibility: {predicted_Isothermal_Compressibility:.6f} TPa\u207B\u00B9")
         st.success(f"Predicted Heat Capacity: {predicted_Heat_Capacity:.6f} KJ/Kg*K")
-        st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} m*10\u207B\u00B9\u00B9"")
+        st.success(f"Predicted Intermolecular Free Length: {predicted_intermolecular_free_length:.6f} m*10\u207B\u00B9\u00B9")
         st.success(f"Predicted Internal Pressure: {predicted_internal_pressure:.6f} MPa")
         st.success(f"Predicted Cohesion Energy Density: {predicted_cohesion_energy_density:.6f} Pa*m")
         st.success(f"Predicted Gruneisen Parameter: {predicted_gruneisen_parameter:.6f}")
