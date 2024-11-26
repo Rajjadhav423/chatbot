@@ -169,8 +169,6 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
-pip install xgboost
-import xgboost
 
 # Set custom CSS to change the background color to black
 st.markdown("""
