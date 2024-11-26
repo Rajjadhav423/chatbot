@@ -96,6 +96,7 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
+import xgboost as xgb
 
 
 # Define the paths to the model files (keeping them in the same folder as the app)
