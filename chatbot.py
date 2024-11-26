@@ -329,4 +329,4 @@ if predicted_density is not None and predicted_velocity is not None and predicte
         st.success(f"Predicted Gruneisen Parameter: {predicted_gruneisen_parameter:.6f}")
         st.success(f"Predicted Acoustic Impedance: {predicted_acoustic_impedance:.6f} kg/m²s * 10\u2074")
         st.success(f"Predicted Non-Linearity Parameter: {predicted_non_linearity_parameter:.6f}")
-        st.success(f"Predicted Solubility Parameter: {predicted_solubility_parameter:.6f} (g/kg)¹²"))
+        st.success(f"Predicted Solubility Parameter: {predicted_solubility_parameter:.6f} g/kg¹²"))
