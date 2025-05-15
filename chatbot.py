@@ -169,7 +169,6 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
-joblib.dump(model, 'den.joblib')
 
 
 # Set custom CSS to change the background color to black
