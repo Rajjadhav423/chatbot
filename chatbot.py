@@ -169,7 +169,7 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
-
+joblib.dump(model, 'den.joblib')
 
 
 # Set custom CSS to change the background color to black
@@ -218,6 +218,7 @@ def load_model(model_path):
     try:
         # Use joblib to load the model
         model = joblib.load(model_path)
+            model = joblib.load('den.joblib')
         return model
     except FileNotFoundError:
         st.error(f"Model file '{model_path}' not found. Please check the file path and try again.")
