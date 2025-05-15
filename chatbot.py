@@ -198,7 +198,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Define the paths to the model files (keeping them in the same folder as the app)
-model_path_density = 'den.pkl'
+model_path_density = 'density.pkl'
 model_path_velocity = 'ultrasonicvelocity.pkl'
 model_path_thermal_expansion_coefficient = 'thermalexpansion.pkl'
 model_path_Adiabatic_Compressibility = 'AdiabaticCompressibility.pkl'
