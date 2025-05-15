@@ -169,7 +169,7 @@
 import streamlit as st
 import pandas as pd
 import joblib  # Import joblib instead of pickle
-import cloudpickle
+
 
 
 # Set custom CSS to change the background color to black
@@ -225,16 +225,7 @@ def load_model(model_path):
     except Exception as e:
         st.error(f"Error loading model from '{model_path}': {e}")
         st.stop()
-def load_model(path):
-    try:
-        with open(path, 'rb') as f:
-            return cloudpickle.load(f)
-    except FileNotFoundError:
-        st.error(f"Model file '{path}' not found.")
-        st.stop()
-    except Exception as e:
-        st.error(f"Error loading model from '{path}': {e}")
-        st.stop()
+
 
 # Load models
 model_density = load_model(model_path_density)
